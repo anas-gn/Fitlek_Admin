@@ -1,0 +1,291 @@
+/* ── Page wrapper ─────────────────────────────────────────── */
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  
+  /* Fond clair avec image gym en arrière-plan */
+  background: 
+    linear-gradient(180deg, rgba(248, 249, 245, 0.92) 0%, rgba(248, 249, 245, 0.88) 100%),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop") center/cover no-repeat;
+}
+
+/* Glow subtil vert lime */
+.glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(600px 300px at 20% 20%, rgba(198, 241, 53, 0.12), transparent 60%),
+    radial-gradient(700px 350px at 80% 80%, rgba(198, 241, 53, 0.08), transparent 60%);
+  pointer-events: none;
+}
+
+/* ── Card ─────────────────────────────────────────────────── */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(224, 226, 220, 0.8);
+  border-radius: 16px;
+  padding: 32px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 
+    0 4px 24px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.02);
+  animation: cardEnter 0.6s ease-out;
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ── Brand / Logo ─────────────────────────────────────────── */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 10px;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #d1f96b, #c6f135);
+  border-radius: 16px;
+  border: 1px solid rgba(198, 241, 53, 0.3);
+  animation: logoPulse 2s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(198, 241, 53, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgba(198, 241, 53, 0.15);
+  }
+}
+
+.brandMark {
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #1a1a1a;
+  line-height: 1;
+}
+
+.brandSub {
+  font-size: 12px;
+  color: #8b9280;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── Form fields ──────────────────────────────────────────── */
+.label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8b9280;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e0e2dc;
+  color: #1a1a1a;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: "Inter", -apple-system, sans-serif;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input::placeholder {
+  color: #b0b5a8;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #c6f135;
+  box-shadow: 0 0 0 3px rgba(198, 241, 53, 0.15);
+}
+
+/* ── Error ────────────────────────────────────────────────── */
+.error {
+  color: #b03018;
+  font-size: 13px;
+  margin-top: 12px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.error::before {
+  content: "⚠";
+  font-size: 14px;
+  color: #ff5a36;
+}
+
+/* ── Submit button ────────────────────────────────────────── */
+.submit {
+  margin-top: 22px;
+  background: linear-gradient(135deg, #c6f135, #a8d420);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.submit:hover {
+  background: linear-gradient(135deg, #d4f54a, #c6f135);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(198, 241, 53, 0.3);
+}
+
+.submit:hover::after {
+  transform: translateX(100%);
+}
+
+.submit:active {
+  transform: scale(0.98) translateY(0);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ── Hint ─────────────────────────────────────────────────── */
+.hint {
+  font-size: 11px;
+  color: #b0b5a8;
+  margin-top: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.hint code {
+  font-family: "IBM Plex Mono", monospace;
+  background: #f0f1ec;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #5a6e0a;
+  font-size: 10px;
+}
+
+/* ── Splash screen overlay ────────────────────────────────── */
+.splash {
+  position: fixed;
+  inset: 0;
+  background: #f8f9f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 9999;
+  animation: splashOut 0.8s ease-in-out 2s forwards;
+}
+
+@keyframes splashOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+    pointer-events: none;
+  }
+}
+
+.splashLogo {
+  width: 80px;
+  height: 72px;
+  animation: splashBounce 1s ease-in-out infinite;
+}
+
+@keyframes splashBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.splashText {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.1em;
+}
+
+.splashSub {
+  font-size: 12px;
+  color: #8b9280;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .wrap {
+    padding: 16px;
+    background: 
+      linear-gradient(180deg, rgba(248, 249, 245, 0.95) 0%, rgba(248, 249, 245, 0.92) 100%),
+      url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop") center/cover no-repeat;
+  }
+  
+  .card {
+    padding: 24px 20px 20px;
+    background: rgba(255, 255, 255, 0.97);
+  }
+  
+  .brandMark {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,194 @@
+/* ── Global ────────────────────────────────────────────────── */
+.page {
+  min-height: 100vh;
+  padding: 40px 48px;
+  background: #f8f9f5;
+  color: #1a1a1a;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page.mounted {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.header {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5a6e0a;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 42px;
+  letter-spacing: 0.02em;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #8b9280;
+  margin: 10px 0 0 0;
+  max-width: 480px;
+}
+
+/* ── Panel ────────────────────────────────────────────────── */
+.panel {
+  background: #ffffff;
+  border: 1px solid #e0e2dc;
+  border-radius: 16px;
+  padding: 24px;
+  transition: box-shadow 0.2s ease;
+}
+
+.panel:hover {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* ── Form ─────────────────────────────────────────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.row > * {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* ── Form Group ───────────────────────────────────────────── */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3a3a3a;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.formInput,
+.formSelect {
+  padding: 12px 14px;
+  border: 1px solid #e0e2dc;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1a1a1a;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.formInput::placeholder {
+  color: #b0b5a8;
+}
+
+.formInput:focus,
+.formSelect:focus {
+  border-color: #c6f135;
+  box-shadow: 0 0 0 3px rgba(198, 241, 53, 0.15);
+}
+
+.formSelect {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%238b9280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+/* ── Error & Success ──────────────────────────────────────── */
+.formError {
+  background: rgba(255, 90, 54, 0.08);
+  border: 1px solid rgba(255, 90, 54, 0.3);
+  color: #b03018;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.success {
+  background: rgba(198, 241, 53, 0.12);
+  border: 1px solid rgba(198, 241, 53, 0.4);
+  color: #5a6e0a;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ── Actions ──────────────────────────────────────────────── */
+.formActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid rgba(198, 241, 53, 0.4);
+  background: rgba(198, 241, 53, 0.15);
+  color: #5a6e0a;
+  transition: all 0.15s ease;
+}
+
+.primaryBtn:hover:not(:disabled) {
+  background: rgba(198, 241, 53, 0.25);
+  border-color: rgba(198, 241, 53, 0.6);
+  transform: translateY(-1px);
+}
+
+.primaryBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .page {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 32px;
+  }
+}

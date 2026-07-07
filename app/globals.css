@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  /* ── Color tokens — "gym scoreboard" identity ───────────── */
+  --ink-950: #0a1210;
+  --ink-900: #0f1a17;
+  --panel-900: #13211d;
+  --panel-800: #182a25;
+  --panel-700: #1f342e;
+  --hairline: #2a453d;
+  --text-hi: #eef5f1;
+  --text-mid: #a9c2b8;
+  --text-low: #6f8b81;
+
+  --brass-500: #f2b84b;
+  --brass-400: #f7c96e;
+  --brass-050: #fff3dd;
+
+  --mint-500: #5eead4;
+  --mint-400: #7ef0db;
+  --mint-050: #d9fbf3;
+
+  --coral-500: #ff6b5e;
+  --coral-400: #ff8a80;
+  --coral-050: #ffe4e0;
+
+  /* ── Tokens supplémentaires pour les pages admin ───────── */
+  --accent-primary: var(--brass-500);
+  --accent-primary-hover: var(--brass-400);
+  --accent-positive: var(--mint-500);
+  --accent-positive-bg: rgba(94, 234, 212, 0.08);
+  --accent-positive-border: rgba(94, 234, 212, 0.2);
+  --accent-destructive: var(--coral-500);
+  --accent-destructive-bg: rgba(255, 107, 94, 0.08);
+  --accent-destructive-border: rgba(255, 107, 94, 0.2);
+
+  --font-display: "Oswald", "Arial Narrow", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--ink-950);
+  background-image:
+    radial-gradient(1200px 500px at 100% -10%, rgba(242, 184, 75, 0.06), transparent),
+    radial-gradient(900px 500px at -10% 110%, rgba(94, 234, 212, 0.05), transparent);
+  color: var(--text-hi);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--brass-500);
+  color: var(--ink-950);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brass-400);
+  outline-offset: 2px;
+}
+
+/* ── Utility classes ──────────────────────────────────────── */
+.mono {
+  font-family: var(--font-mono);
+}
+
+.display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+/* ── Scrollbar styling (dark theme) ───────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ink-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--panel-700);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hairline);
+}
+
+/* ── Reduced motion ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
