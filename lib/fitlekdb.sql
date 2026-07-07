@@ -3,10 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3308
--- Généré le : lun. 06 juil. 2026 à 19:47
+-- Généré le : mar. 07 juil. 2026 à 21:37
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.0.30
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -272,7 +271,20 @@ INSERT INTO `authtokens` (`id`, `userID`, `refreshToken`, `deviceInfo`, `expires
 (201, 30, '662db84e572895597c14166f530a792ab217926343a7b442c1a07c5807ab471f9b5aac85b5febfc72b13767f85c356e115c65fb9a0e5f8a61739933faaa0ec19', NULL, '2026-08-05 16:59:26', NULL, '2026-07-06 16:59:26'),
 (202, 30, '8b0e22cdc67131d62621c288157bca336b48f3b48cdc35bd6b15661d6a0c4e29577532ca1112e17ab96a55e8176d1cdfb9d99aaea345d4e359fa39d4dbbba724', NULL, '2026-08-05 17:32:40', NULL, '2026-07-06 17:32:40'),
 (203, 25, 'e9548ae0a68471e94c1dcdd555d6d3a33f59da1f03981ee84b191a6a8ee2820b9935d0c16263f9e3dd3682005e6c6040bf0a0f6f7ab6bb4c65cc7edd4428f218', 'web-nextjs', '2026-08-05 18:03:15', NULL, '2026-07-06 18:03:15'),
-(204, 25, 'ce67c1640ca63e0b9f73296d541dc83dae92ed0f610d3a71bd85a8c78da0ce5e32eb9f46b5efee88ad961f733f7941486e14e61e3252015b444143be75385357', 'web-nextjs', '2026-08-05 18:33:16', NULL, '2026-07-06 18:33:16');
+(204, 25, 'ce67c1640ca63e0b9f73296d541dc83dae92ed0f610d3a71bd85a8c78da0ce5e32eb9f46b5efee88ad961f733f7941486e14e61e3252015b444143be75385357', 'web-nextjs', '2026-08-05 18:33:16', NULL, '2026-07-06 18:33:16'),
+(205, 28, 'ab493d569b601e26b3dba9e2cb80deddfb1b0304f4f327bb98af72e698626323919b4833f63f750627703fa1dc7e35b215a07386fb2d4f608ed6fa0da84106d0', 'web-nextjs', '2026-08-05 18:51:17', NULL, '2026-07-06 18:51:17'),
+(206, 25, 'db22774e0f7cf78df79af2e4773f458dcc860cd2ab8508dabba3995e979165730a5ecce44ef7826c0ece6270c5069c3485c76c543bdd72ccf0a2aa41aa72ab90', 'web-nextjs', '2026-08-06 12:47:23', NULL, '2026-07-07 12:47:23'),
+(207, 27, '68ae9ac9f14203dc8b6863a8b0ecc827dd8a27ba336a9eacaab20fc1420e57cde64e75b8323176057fa7c53d6145d54d7af55ffe8fff9a1997f2254d91bd42b2', NULL, '2026-08-06 12:57:52', NULL, '2026-07-07 12:57:52'),
+(208, 30, '85322d505e9027fe506d55be653702a5c425e3cf3323aef424b10221369456ee5fd62adfcece4e12104ee91030c0b30eac02df50133491007210b4d295b6c5f3', NULL, '2026-08-06 13:08:21', NULL, '2026-07-07 13:08:21'),
+(209, 27, '33bfd75363eca12ba8bad6876174d6d9d4af272921c9cfcdc58bba96a16131ef6b9ad07120f0293dda7a8ff006c491cce4651c7126026e7ef2cd5b532c0c2d01', NULL, '2026-08-06 14:10:12', NULL, '2026-07-07 14:10:12'),
+(210, 27, '2930dea21c3d0fef15e74da456c3e2a8bf104dd3788d6cc7061dd6d86bebcc12e7a1a59220414e705bef2bda321467fd76e47e32cd7a4c14d6dc11d9e74363d6', NULL, '2026-08-06 14:16:49', NULL, '2026-07-07 14:16:49'),
+(211, 11, '1e362c7f66ae72fb435f47016a5ea1e87e178af86f8464f9a40f319cc96ffd5860823a1d3faaad6a847e0fd52bcfbfbe837a1789ce1ac0d4c06d86e410a6a118', NULL, '2026-08-06 14:20:28', NULL, '2026-07-07 14:20:28'),
+(212, 30, 'b667771e19fd55140bbfc223cf25ab6ca2d5d759c91f8c30bb6190d27c361be36ce61f245b75983a289c93764401d61d8c80ef9281a6a15b4886770fb0731097', NULL, '2026-08-06 14:45:10', NULL, '2026-07-07 14:45:10'),
+(213, 30, '9a8644e30d65adb3fb5f8e49e1043647fb6f256859667144a73c9f1efdf24e9d796e2dc2787ed2d17e6763d7c119ba4f2407ca8d67f0382409494f0ae1ca2c98', NULL, '2026-08-06 15:21:49', NULL, '2026-07-07 15:21:49'),
+(214, 25, '442484323cfbac8e8195bea39b80930c12661f135e4f74c14fd0539619c39b53f2b259f80a1152ba8e5e77f4c3c6d6ef74d009f0e24ab1d02fa9272ae9ad5bf7', 'web-nextjs', '2026-08-06 19:48:16', NULL, '2026-07-07 19:48:16'),
+(215, 28, '30ed035ffd2269e07b8853470b8477d3ea88c0c44dd88576c5454cf9eec3fbea1b905ded6156bf576067e5dca2905bb07fd65d11529d5e5e53614b3508ebf970', 'web-nextjs', '2026-08-06 20:03:05', NULL, '2026-07-07 20:03:05'),
+(216, 28, 'af3ccabd74a36fccc6db59412f335658600fe2a2b68d5576f95bdd766199ed494ac0f68329e8a391e362103bdc4e159a0cab4051de01da3f2561682bfb3c7038', 'web-nextjs', '2026-08-06 20:07:55', NULL, '2026-07-07 20:07:55'),
+(217, 25, '761e425787d66fb618b945b5d057f15f3b74108f8f6e600a859eb81c9f7a638fd513d3adf6084a89a1693cc3895658106cfab1c42c0156b19e20c87a3035003d', 'web-nextjs', '2026-08-06 20:14:26', NULL, '2026-07-07 20:14:26');
 
 -- --------------------------------------------------------
 
@@ -514,7 +526,8 @@ INSERT INTO `invitations` (`id`, `coachID`, `invitedUserID`, `pointsEarned`, `st
 (4, 6, 27, 0, 'pending', '2026-07-05 13:47:22', NULL),
 (5, 29, 27, 0, 'pending', '2026-07-05 20:50:43', NULL),
 (6, 30, 27, 0, 'accepted', '2026-07-06 09:39:01', '2026-07-06 13:01:44'),
-(7, 26, 27, 20, 'pending', '2026-07-06 16:30:30', NULL);
+(7, 26, 27, 20, 'pending', '2026-07-06 16:30:30', NULL),
+(8, 30, 11, 20, 'pending', '2026-07-07 14:21:12', NULL);
 
 -- --------------------------------------------------------
 
@@ -567,7 +580,9 @@ CREATE TABLE `passwordresettokens` (
 --
 
 INSERT INTO `passwordresettokens` (`id`, `userID`, `token`, `expiresAt`, `usedAt`, `createdAt`) VALUES
-(1, 3, 'pwd_reset_9876543210', '2025-03-20 23:59:59', NULL, '2025-03-18 10:00:00');
+(1, 3, 'pwd_reset_9876543210', '2025-03-20 23:59:59', NULL, '2025-03-18 10:00:00'),
+(2, 11, 'cd53fbffce21d868e95875933ce7aa543a9469e56fa66aade3d034d6a6d4ab63', '2026-07-07 14:48:18', NULL, '2026-07-07 13:48:18'),
+(3, 11, 'e63cd7843d2dc43476a2d1872fcf67dd2e276849349d32531fc3fe5bfc654fff', '2026-07-07 14:50:26', NULL, '2026-07-07 13:50:26');
 
 -- --------------------------------------------------------
 
@@ -648,7 +663,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `passwordHash`, `role`, `gender`, `height`, `avatarUrl`, `isPremium`, `isApproved`, `createdAt`, `updatedAt`) VALUES
-(1, 'Admin', 'Fitlek', 'admin@fitlek.com', '$2y$10$hashfakedmin123', 'admin', 'Other', NULL, 'https://randomuser.me/api/portraits/men/1.jpg', 0, 1, '2025-01-01 08:00:00', '2025-01-01 08:00:00'),
+(1, 'Admin', 'Fitlek', 'admin@fitlek.com', '$2b$12$aXw47JXhaLlKCe11K2fACuCyXyx26c9OLc32/2yEU0dvAJxLTrzoO', 'admin', 'Other', NULL, 'https://randomuser.me/api/portraits/men/1.jpg', 0, 1, '2025-01-01 08:00:00', '2026-07-06 20:00:19'),
 (2, 'Sophie', 'Martin', 'sophie.martin@example.com', '$2b$12$iWiR8DXnKmBo6A0sIzvWYuSivsrV/HDPubSykU4N4Wy.aKVrDmO5m', 'client', 'Female', 170.00, 'https://randomuser.me/api/portraits/women/2.jpg', 1, 1, '2025-02-10 09:30:00', '2026-07-05 20:08:22'),
 (3, 'Thomas', 'Durand', 'thomas.durand@example.com', '$2b$12$iWiR8DXnKmBo6A0sIzvWYuSivsrV/HDPubSykU4N4Wy.aKVrDmO5m', 'client', 'Male', 170.00, 'https://randomuser.me/api/portraits/men/3.jpg', 0, 1, '2025-02-15 10:15:00', '2026-07-05 20:08:22'),
 (4, 'Laura', 'Petit', 'laura.petit@example.com', '$2y$10$hashclient3', 'client', 'Female', 170.00, NULL, 1, 1, '2025-02-20 11:45:00', '2026-07-05 20:08:22'),
@@ -658,7 +673,7 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `passwordHash`, `ro
 (8, 'Coach', 'Marc', 'marc.bernard@coach.com', '$2y$10$hashcoach3', 'coach', 'Male', NULL, NULL, 0, 0, '2025-02-01 10:00:00', '2025-02-01 10:00:00'),
 (9, 'Manager', 'Julie', 'julie.manager@fitlek.com', '$2y$10$hashmanager1', 'manager', 'Female', NULL, 'https://randomuser.me/api/portraits/women/9.jpg', 0, 1, '2025-01-10 08:30:00', '2025-01-10 08:30:00'),
 (10, 'Gym', 'ANAS', 'philippe.advisor@fitlek.com', '$2b$12$iWiR8DXnKmBo6A0sIzvWYuSivsrV/HDPubSykU4N4Wy.aKVrDmO5m', 'advisor', 'Other', NULL, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqTE65i9LEIIIh_7QNq_kWuBCe2Ndz9DN49w&s', 0, 1, '2025-01-25 09:15:00', '2026-06-11 18:36:51'),
-(11, 'anas', 'gana', 'anasgana2003@gmail.com', '$2b$12$wztbMP7CcwdXBiNh95J40.8.hitOttgCYa0PhEcnVEW6vZizryViG', 'client', 'Male', 170.00, 'https://res.cloudinary.com/dzetk7z2n/image/upload/v1782250980/fitlek/avatars/avatar_11.png', 0, 0, '2026-06-11 08:11:57', '2026-07-05 20:08:22'),
+(11, 'anas', 'gana', 'anasgana2003@gmail.com', '$2b$12$7pOzX.RFnzuzYYO0GjhTOOEbasM0/vHAB5kaG4TKpN3.U0Ee1MW2e', 'client', 'Male', 170.00, 'https://res.cloudinary.com/dzetk7z2n/image/upload/v1782250980/fitlek/avatars/avatar_11.png', 0, 0, '2026-06-11 08:11:57', '2026-07-07 14:06:04'),
 (12, 'anas', 'gana', 'anasgana2010@gmail.com', '$2b$12$DCZzpWKKVHD./M8sXFZ3OeL9Cd80XYI5df/dZ03LpZnJBDSHFKybe', 'client', 'Male', 170.00, 'https://res.cloudinary.com/dzetk7z2n/image/upload/v1781295849/fitlek/avatars/avatar_12.jpg', 0, 0, '2026-06-11 08:14:55', '2026-07-05 20:08:22'),
 (13, 'anas', 'gana', 'anasgana266@gmail.com', '$2b$12$3.jXiF0.geakasIx7pqinem/nJ0jRJz7joUoJXxQ5fLz2yrCBSm6u', 'coach', 'Male', NULL, NULL, 0, 0, '2026-06-11 17:14:10', '2026-06-11 17:14:10'),
 (14, 'amin', 'rahal', 'anasgana2004@gmail.com', '$2b$12$RgdAMB9zVi3Xr2Vx9l8GPOl1x4l244jKBKX8jEnqpD1W5f9bKJdYC', 'advisor', 'Male', NULL, NULL, 0, 0, '2026-06-23 22:45:58', '2026-06-23 22:45:58'),
@@ -671,13 +686,15 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `passwordHash`, `ro
 (21, 'hhh', 'hh', 'jjjjjjjjjjjjjjjj', '$2b$12$l1ZHlhl4IT3u3Zu8/LmEquA6kDkPiGAGu.6kKrnEhI2pA35/TR8hy', 'coach', 'Other', NULL, NULL, 0, 0, '2026-06-27 11:26:45', '2026-06-27 11:26:45'),
 (22, 'hhhhhhhhhhhhhh', 'uuuuuuuuuuuuuuu', 'hhhhhhhhhhhhhh', '$2b$12$OXO1Kk4aKvVmKV1cIjPxMeN9Ea.HMzyHxoj7511hy8cN0FYGAZYlu', 'coach', 'Other', NULL, NULL, 0, 0, '2026-06-27 11:31:02', '2026-06-27 11:31:02'),
 (23, 'hhhhh', 'hhhh', 'kjjjjjjjjjj', '$2b$12$GIKaZt395jRwRIZAB5413Ok0su.wKhS34GahEelufpc0kPIJoDQy.', 'coach', 'Other', NULL, NULL, 0, 0, '2026-06-29 21:19:01', '2026-06-29 21:19:01'),
-(24, 'hhhhh', 'hhhh', 'kjjjjjjjjjj@gmail.com', '$2b$12$7X4iMtNZVCCD3/S3UMzKjeMejhRdc3m1qkjMnv0pYIfJc8MGDJg3u', 'coach', 'Other', NULL, NULL, 0, 0, '2026-06-29 21:20:30', '2026-06-29 21:20:30'),
+(24, 'hhhhh', 'hhhh', 'kjjjjjjjjjj@gmail.com', '$2b$12$7X4iMtNZVCCD3/S3UMzKjeMejhRdc3m1qkjMnv0pYIfJc8MGDJg3u', 'coach', 'Other', NULL, NULL, 0, 1, '2026-06-29 21:20:30', '2026-07-06 21:03:39'),
 (25, 'The Newcastle', 'Gym', 'hananebaki@managem.com', '$2b$12$aXw47JXhaLlKCe11K2fACuCyXyx26c9OLc32/2yEU0dvAJxLTrzoO', 'advisor', 'Male', NULL, 'https://res.cloudinary.com/dzetk7z2n/image/upload/v1783024999/fitlek/avatars/avatar_25_1783024980740.jpg', 0, 1, '2026-07-02 12:23:47', '2026-07-02 21:51:11'),
 (26, 'karim', 'amin', 'karimkarim@managem.com', '$2a$12$q9Y9D7nt/5/CdPOqe1zib.uTI9TCFnag6HA8T.NFby9Bm16s9GXo2', 'coach', 'Male', NULL, NULL, 0, 1, '2026-07-02 12:46:12', '2026-07-02 12:46:12'),
 (27, 'mouad', 'gana', 'anasgana@gmail.com', '$2b$12$E6jgXmLzOMOzGxJsw1JwMeP1UvVyIhCfFNpEYUDo182GD..zVIuWe', 'client', 'Male', 185.00, 'https://res.cloudinary.com/dzetk7z2n/image/upload/v1783331465/fitlek/avatars/avatar_27.png', 1, 1, '2026-07-02 13:29:25', '2026-07-06 10:50:49'),
-(28, 'Farah', 'GYM', 'admin@managem.com', '$2a$12$QrysngSYGN1DYktnrkuJke4w1kUeLyPyw.MwT/mzbogsBDxOJ6Ufq', 'advisor', 'Male', NULL, NULL, 0, 0, '2026-07-02 23:07:00', '2026-07-02 23:07:00'),
+(28, 'Farah', 'GYM', 'admin@managem.com', '$2a$12$QrysngSYGN1DYktnrkuJke4w1kUeLyPyw.MwT/mzbogsBDxOJ6Ufq', 'advisor', 'Male', NULL, 'https://res.cloudinary.com/dzetk7z2n/image/upload/v1783451326/fitlek/avatars/avatar_28_1783451303795.jpg', 0, 1, '2026-07-02 23:07:00', '2026-07-07 20:08:25'),
 (29, 'Amin', 'Mourabit', 'anasgana200@gmail.com', '$2a$12$04op0T0M1S6o9Y3R6rTurON/0hclsaAap7qsov2LqJGs7qwx9FOpW', 'coach', 'Male', NULL, NULL, 0, 1, '2026-07-04 12:21:37', '2026-07-04 12:21:37'),
-(30, 'aùmin', 'amin', 'aminamin@gmail.com', '$2b$12$46iax1RZkFs50hFN7atxH.vRBW4LVVLn8lbPQ1aBXMHHzJeKlXVQi', 'coach', 'Male', NULL, NULL, 1, 1, '2026-07-06 08:44:11', '2026-07-06 09:38:45');
+(30, 'aùmin', 'amin', 'aminamin@gmail.com', '$2b$12$46iax1RZkFs50hFN7atxH.vRBW4LVVLn8lbPQ1aBXMHHzJeKlXVQi', 'coach', 'Male', NULL, NULL, 1, 1, '2026-07-06 08:44:11', '2026-07-06 09:38:45'),
+(31, 'anas', 'gana', 'admin@anas.com', '$2a$12$NFLlAkFIh//LWaD0ls6GI.4.Bz1W2jPAlua.LJbSfQCFOCms.ZixO', 'admin', 'Male', NULL, NULL, 0, 1, '2026-07-06 20:08:36', '2026-07-06 20:08:36'),
+(32, 'salma', 'gana', 'salmagana@gmail.com', '$2b$12$fRsNf9O.kDf9O2pBUnGYl.evDKp/URs2mOVSm/TnunSSGF.lAzLy6', 'client', 'Female', NULL, NULL, 0, 0, '2026-07-07 13:33:42', '2026-07-07 13:33:42');
 
 -- --------------------------------------------------------
 
@@ -883,7 +900,7 @@ ALTER TABLE `advisorprofiles`
 -- AUTO_INCREMENT pour la table `authtokens`
 --
 ALTER TABLE `authtokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=205;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=218;
 
 --
 -- AUTO_INCREMENT pour la table `bans`
@@ -937,7 +954,7 @@ ALTER TABLE `imageadvisor`
 -- AUTO_INCREMENT pour la table `invitations`
 --
 ALTER TABLE `invitations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `messages`
@@ -949,7 +966,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT pour la table `passwordresettokens`
 --
 ALTER TABLE `passwordresettokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `reservations`
@@ -961,7 +978,7 @@ ALTER TABLE `reservations`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT pour la table `weighthistory`
