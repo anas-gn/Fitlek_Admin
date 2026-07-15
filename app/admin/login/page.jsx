@@ -7,21 +7,7 @@ import styles from "./login.module.css";
 // Logo SVG Component
 function Logo({ className }) {
   return (
-    <svg
-      className={className}
-      width="40"
-      height="36"
-      viewBox="0 0 132 120"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle cx="65.6104" cy="17.25" r="17.25" fill="#ffffff" />
-      <path
-        d="M5.8103 21.85C19.2827 35.9 45.0007 47.25 64.4603 47.7336M125.41 21.85C112.388 36.0329 83.709 48.212 64.4603 47.7336M64.4603 47.7336V106.95C87.8436 95.8333 128.4 73.37 103.56 72.45C78.7203 71.53 36.477 72.0666 18.4603 72.45"
-        stroke="white"
-        strokeWidth="16.1"
-      />
-    </svg>
+    <img src="/logoFitlek.png" width="180" height="60" alt="Logo Fitlek" className={className} />
   );
 }
 
@@ -30,7 +16,6 @@ function SplashScreen() {
   return (
     <div className={styles.splash}>
       <Logo className={styles.splashLogo} />
-      <span className={styles.splashText}>FITLEK</span>
       <span className={styles.splashSub}>Console Admin</span>
     </div>
   );
@@ -86,7 +71,6 @@ export default function LoginPage() {
             <div className={styles.logoWrap}>
               <Logo />
             </div>
-            <span className={styles.brandMark}>FITLEK</span>
             <span className={styles.brandSub}>Console admin</span>
           </div>
 
@@ -125,7 +109,7 @@ export default function LoginPage() {
           </button>
 
           <p className={styles.hint}>
-            Accès réservé aux comptes ayant le rôle <code>admin</code> dans la base Fitlek.
+            Accès réservé aux comptes ayant le rôle <code>admin</code> dans la base SERVIA.
           </p>
         </form>
       </main>

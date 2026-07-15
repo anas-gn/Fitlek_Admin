@@ -79,11 +79,11 @@
 
 .navItemActive {
   background: rgba(198, 241, 53, 0.12);
-  color: #5a6e0a;
+  color: #1A7A7A;
 }
 
 .navItemActive svg {
-  color: #5a6e0a;
+  color: #1A7A7A;
 }
 
 /* ── Sidebar Footer ─────────────────────────────────────── */

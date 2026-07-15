@@ -70,10 +70,6 @@
   justify-content: center;
   width: 64px;
   height: 64px;
-  background: linear-gradient(135deg, #d1f96b, #c6f135);
-  border-radius: 16px;
-  border: 1px solid rgba(198, 241, 53, 0.3);
-  animation: logoPulse 2s ease-in-out infinite;
 }
 
 @keyframes logoPulse {
@@ -153,8 +149,8 @@
 /* ── Submit button ────────────────────────────────────────── */
 .submit {
   margin-top: 22px;
-  background: linear-gradient(135deg, #c6f135, #a8d420);
-  color: #1a1a1a;
+  background: linear-gradient(135deg, #1A7A7A, #104e4e);
+  color: white;
   border: none;
   border-radius: 10px;
   padding: 13px 16px;
@@ -177,9 +173,9 @@
 }
 
 .submit:hover {
-  background: linear-gradient(135deg, #d4f54a, #c6f135);
+  background: linear-gradient(135deg, #1A7A7A, #104e4e);
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(198, 241, 53, 0.3);
+  box-shadow: 0 8px 24px rgba(16, 78, 78, 0.3);
 }
 
 .submit:hover::after {
@@ -242,9 +238,8 @@
 }
 
 .splashLogo {
-  width: 80px;
+  width: 190px;
   height: 72px;
-  animation: splashBounce 1s ease-in-out infinite;
 }
 
 @keyframes splashBounce {

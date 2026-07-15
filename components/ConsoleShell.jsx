@@ -16,21 +16,7 @@ const NAV = [
 // Logo SVG Component
 function Logo({ className }) {
   return (
-    <svg
-      className={className}
-      width="40"
-      height="36"
-      viewBox="0 0 132 120"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle cx="65.6104" cy="17.25" r="17.25" fill="#D1F96B" />
-      <path
-        d="M5.8103 21.85C19.2827 35.9 45.0007 47.25 64.4603 47.7336M125.41 21.85C112.388 36.0329 83.709 48.212 64.4603 47.7336M64.4603 47.7336V106.95C87.8436 95.8333 128.4 73.37 103.56 72.45C78.7203 71.53 36.477 72.0666 18.4603 72.45"
-        stroke="#1a1a1a"
-        strokeWidth="16.1"
-      />
-    </svg>
+   <img src="/logoFitlek.png" width="160" height="50" alt="Logo Fitlek" className={className} />
   );
 }
 
@@ -61,9 +47,6 @@ export default function ConsoleShell({ children }) {
           <div className={styles.logoWrap}>
             <Logo />
           </div>
-          <div>
-            <span className={styles.brandMark}>FITLEK</span>
-          </div>
         </div>
 
         <nav className={styles.nav}>
@@ -85,7 +68,7 @@ export default function ConsoleShell({ children }) {
 
         <div className={styles.sidebarFooter}>
           <p className={styles.footerNote}>
-            Gestion des comptes, des bannissements et des réservations Fitlek.
+            Gestion des comptes, des bannissements et des réservations SERVIA.
           </p>
         </div>
       </aside>

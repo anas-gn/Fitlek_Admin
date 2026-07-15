@@ -128,7 +128,7 @@
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #5a6e0a;
+  color: #1A7A7A;
   margin-bottom: 8px;
 }
 .title {
@@ -168,7 +168,7 @@
 }
 .select:hover,
 .select:focus {
-  border-color: #c6f135;
+  border-color: #1A7A7A;
 }
 .searchWrap {
   position: relative;
@@ -198,7 +198,7 @@
 }
 .search:hover,
 .search:focus {
-  border-color: #c6f135;
+  border-color: #1A7A7A;
 }
 .search::placeholder {
   color: #b0b5a8;
@@ -244,7 +244,7 @@
   width: 32px;
   height: 32px;
   border: 2px solid #e0e2dc;
-  border-top-color: #c6f135;
+  border-top-color: #1A7A7A;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -370,7 +370,7 @@
 }
 .statusMint {
   background: rgba(198, 241, 53, 0.12);
-  color: #5a6e0a;
+  color: #1A7A7A;
   border-color: rgba(198, 241, 53, 0.4);
 }
 .statusAmber {
@@ -410,7 +410,7 @@
 }
 .btnPositive {
   background: rgba(198, 241, 53, 0.12);
-  color: #5a6e0a;
+  color: #1A7A7A;
   border-color: rgba(198, 241, 53, 0.3);
 }
 .btnPositive:hover:not(:disabled) {
