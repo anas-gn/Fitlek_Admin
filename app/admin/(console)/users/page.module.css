@@ -26,12 +26,14 @@
   margin-bottom: 24px;
   padding-bottom: 20px;
   border-bottom: 1px solid #e0e2dc;
+  flex-wrap: wrap;
 }
 
 .profileHeaderInfo {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-width: 0;
 }
 
 .profileName {
@@ -39,12 +41,14 @@
   font-weight: 700;
   color: #1a1a1a;
   margin: 0;
+  word-break: break-word;
 }
 
 .profileEmail {
   font-size: 0.9rem;
   color: #6b7280;
   margin: 0;
+  word-break: break-word;
 }
 
 .profileBadges {
@@ -222,6 +226,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .resultsCount {
   font-size: 12px;
@@ -279,6 +285,7 @@
 /* ── Table ────────────────────────────────────────────────── */
 .tableWrap {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .table {
   width: 100%;
@@ -319,6 +326,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0;
 }
 .userName {
   font-weight: 600;
@@ -350,6 +358,7 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   border: 1px solid;
+  white-space: nowrap;
 }
 
 /* ── Status Pills ─────────────────────────────────────────── */
@@ -367,6 +376,7 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   border: 1px solid;
+  white-space: nowrap;
 }
 .statusMint {
   background: rgba(198, 241, 53, 0.12);
@@ -548,6 +558,7 @@
   background: #f8f9f5;
   border-radius: 12px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 .banName,
 .deleteName {
@@ -555,6 +566,7 @@
   color: #1a1a1a;
   font-size: 14px;
   margin: 0;
+  word-break: break-word;
 }
 .banEmail,
 .deleteRole {
@@ -562,6 +574,7 @@
   color: #8b9280;
   margin: 2px 0 0 0;
   font-family: "IBM Plex Mono", monospace;
+  word-break: break-word;
 }
 .deleteWarning {
   color: #8b9280;
@@ -570,7 +583,7 @@
   margin: 0 0 20px 0;
 }
 
-/* ── Responsive ───────────────────────────────────────────── */
+/* ── Responsive : tablette (≤900px) ───────────────────────── */
 @media (max-width: 900px) {
   .page {
     padding: 24px;
@@ -578,14 +591,25 @@
   .filters {
     flex-direction: column;
   }
+  .select {
+    min-width: 0;
+    width: 100%;
+  }
   .searchWrap {
     max-width: 100%;
+    min-width: 0;
+    width: 100%;
   }
   .table thead th,
   .table tbody td {
     padding: 10px 12px;
   }
+  .profileStats {
+    flex-wrap: wrap;
+  }
 }
+
+/* ── Responsive : mobile (≤600px) ─────────────────────────── */
 @media (max-width: 600px) {
   .title {
     font-size: 32px;
@@ -599,5 +623,74 @@
   }
   .table {
     font-size: 12px;
+  }
+
+  /* Le tableau garde ses colonnes lisibles et devient
+     scrollable horizontalement plutôt que de s'écraser. */
+  .table {
+    min-width: 560px;
+  }
+
+  .panel {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  /* Modal profil : header et stats s'empilent proprement */
+  .profileHeader {
+    gap: 14px;
+  }
+  .profileName {
+    font-size: 1.15rem;
+  }
+  .profileStats {
+    flex-direction: column;
+  }
+  .profileDetailRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .profileDetailValue {
+    text-align: left;
+  }
+
+  /* Boutons de formulaire pleine largeur, empilés, pour un
+     tap facile au pouce sur mobile */
+  .formActions {
+    flex-direction: column-reverse;
+  }
+  .primaryBtn,
+  .ghostBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .banPreview,
+  .deletePreview {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+/* ── Responsive : très petit mobile (≤400px) ───────────────── */
+@media (max-width: 400px) {
+  .page {
+    padding: 12px;
+  }
+  .title {
+    font-size: 26px;
+  }
+  .profileStat {
+    padding: 12px 10px;
+  }
+  .profileStatValue {
+    font-size: 1.2rem;
+  }
+  .rolePill,
+  .statusPill {
+    font-size: 10px;
+    padding: 3px 10px;
   }
 }

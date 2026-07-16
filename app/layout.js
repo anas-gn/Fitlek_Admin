@@ -1,10 +1,10 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Fitlek Admin — Console de modération",
-  description: "Console d'administration Fitlek : comptes, bannissements, réservations.",
+  title: "SIRVYA Admin — Console de modération",
+  description: "Console d'administration SIRVYA : comptes, bannissements, réservations.",
   icons: {
-    icon: "/logoFitlek.png",
+    icon: "/icon_app.png",
   },
 };
 

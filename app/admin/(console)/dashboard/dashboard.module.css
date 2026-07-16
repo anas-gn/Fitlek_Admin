@@ -121,6 +121,7 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+  gap: 12px;
 }
 .panelTitle {
   font-size: 15px;
@@ -136,6 +137,7 @@
   padding: 4px 12px;
   border-radius: 20px;
   font-family: "IBM Plex Mono", monospace;
+  white-space: nowrap;
 }
 
 .barList {
@@ -159,11 +161,16 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .barIcon {
   color: #8b9280;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 .statusIcon {
   font-size: 14px;
@@ -212,6 +219,17 @@
   text-align: right;
 }
 
+/* ── Conteneur de scroll pour le tableau sur petit écran ────
+   Ajoute cette classe autour de <table> dans le JSX :
+   <div className={styles.tableWrap}><table className={styles.table}>...
+   Si tu ne peux pas modifier le JSX, .table bascule seule en
+   scroll horizontal via la règle mobile plus bas. ──────────── */
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -227,6 +245,7 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   border-bottom: 1px solid #e0e2dc;
+  white-space: nowrap;
 }
 .table tbody td {
   padding: 14px 16px;
@@ -284,6 +303,7 @@
   font-size: 12px;
   font-weight: 700;
   font-family: "IBM Plex Mono", monospace;
+  flex-shrink: 0;
 }
 .rank1 {
   background: linear-gradient(135deg, #ffd700, #ffc107);
@@ -472,6 +492,7 @@
   font-family: "IBM Plex Mono", monospace;
 }
 
+/* ── Responsive : tablette (≤900px) ───────────────────────── */
 @media (max-width: 900px) {
   .page {
     padding: 24px;
@@ -483,16 +504,45 @@
     grid-template-columns: 120px 1fr 40px;
   }
 }
+
+/* ── Responsive : mobile (≤600px) ─────────────────────────── */
 @media (max-width: 600px) {
+  .page {
+    padding: 16px;
+  }
   .title {
     font-size: 32px;
   }
   .grid {
     grid-template-columns: 1fr;
   }
+  .panel {
+    padding: 18px;
+    border-radius: 14px;
+  }
+  .panelHeader {
+    flex-wrap: wrap;
+  }
+  .quickStat {
+    padding: 16px 18px;
+  }
+  .quickStatValue {
+    font-size: 26px;
+  }
+
+  /* Le tableau devient scrollable horizontalement au lieu de
+     déborder de l'écran ou d'écraser les colonnes. */
+  .tableWrap {
+    overflow-x: auto;
+  }
+  .table {
+    min-width: 480px;
+  }
+
   .podium {
     flex-direction: column;
     align-items: center;
+    gap: 12px;
   }
   .podiumRank1 {
     order: 1;
@@ -503,5 +553,37 @@
   }
   .podiumRank3 {
     order: 3;
+  }
+  .podiumItem {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 14px 16px;
+  }
+  .podiumAvatarImg {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ── Responsive : très petit mobile (≤400px) ───────────────
+   Sur ces largeurs, une barRow à 3 colonnes fixes n'a plus
+   la place : le libellé passe au-dessus de la barre. ────────── */
+@media (max-width: 400px) {
+  .barRow {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .barValue {
+    text-align: left;
+  }
+  .rankBadge {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+  .errorCard,
+  .loadingCard {
+    padding: 32px 20px;
   }
 }

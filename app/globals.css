@@ -42,6 +42,10 @@
   --radius-md: 10px;
   --radius-lg: 16px;
 
+  /* ── Espacements fluides (mobile → desktop) ─────────────── */
+  --space-page: clamp(16px, 4vw, 28px);
+  --font-base: clamp(14px, 1vw + 12px, 16px);
+
   color-scheme: dark;
 }
 
@@ -56,6 +60,14 @@ body {
   height: 100%;
 }
 
+html {
+  /* Empêche l'agrandissement automatique du texte au changement
+     d'orientation sur iOS/Android */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 100%;
+}
+
 body {
   background: var(--ink-950);
   background-image:
@@ -63,7 +75,14 @@ body {
     radial-gradient(900px 500px at -10% 110%, rgba(94, 234, 212, 0.05), transparent);
   color: var(--text-hi);
   font-family: var(--font-body);
+  font-size: var(--font-base);
   -webkit-font-smoothing: antialiased;
+  /* Évite le scroll horizontal parasite sur mobile (largeur 100vw,
+     rembourrage négatif, overflow d'un composant, etc.) */
+  overflow-x: hidden;
+  width: 100%;
+  /* Supprime le flash gris au tap sur mobile */
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -72,6 +91,15 @@ a {
 
 button {
   font-family: inherit;
+  /* Supprime le délai de 300ms avant tap sur mobile (double-tap zoom) */
+  touch-action: manipulation;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 ::selection {
@@ -119,5 +147,40 @@ button {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+  }
+}
+
+/* ── Responsive : mobile (≤600px) ─────────────────────────
+   - Les champs de saisie restent à 16px minimum pour empêcher
+     Safari/Chrome iOS de zoomer automatiquement au focus.
+   - Les cibles tactiles (boutons, liens) gardent une hauteur
+     minimale de 44px, recommandation Apple/WCAG.
+   - Les rayons de bordure sont légèrement réduits pour un rendu
+     plus compact sur petit écran. ───────────────────────────── */
+@media (max-width: 600px) {
+  :root {
+    --radius-lg: 12px;
+    --radius-md: 8px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  button,
+  a[role="button"],
+  input[type="button"],
+  input[type="submit"] {
+    min-height: 44px;
+  }
+}
+
+/* ── Support des encoches / safe areas (iPhone notch, etc.) ─ */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 }

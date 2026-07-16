@@ -16,7 +16,7 @@ const NAV = [
 // Logo SVG Component
 function Logo({ className }) {
   return (
-   <img src="/logoFitlek.png" width="160" height="50" alt="Logo Fitlek" className={className} />
+   <img src="/logoFitlek.png" width="190" height="70" alt="Logo Fitlek" className={className} />
   );
 }
 
