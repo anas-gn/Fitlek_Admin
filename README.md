@@ -1,4 +1,4 @@
-# Fitlek Admin — Console de modération
+# SIRVYA Admin — Console de modération
 
 Application **Next.js full-stack** (front-end + API back-end intégrées) pour administrer la
 plateforme Fitlek : approbation des comptes coach/conseiller, bannissement,
